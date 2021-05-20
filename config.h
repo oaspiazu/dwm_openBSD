@@ -8,6 +8,7 @@ static const int swallowfloating    = 0;        /* 1 means swallow floating wind
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh            = 25;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
+static const double defaultopacity  = 0.75;
 static const char *fonts[]          = { "SF Mono:Regular:pixelsize=15:antialias=true:autohint=true" };
 static const char dmenufont[]       = "SF Mono:Regular:pixelsize=15:antialias=true:autohint=true";
 static const char col_gray1[]       = "#222222";
@@ -38,11 +39,11 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class     instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
-	{ "Gimp",    NULL,     NULL,           0,         1,          0,           0,        -1 },
-	{ "Firefox", NULL,     NULL,           1 << 1,    0,          0,          -1,        -1 },
-	{ "St",      NULL,     NULL,           0,         0,          1,           0,        -1 },
-	{ NULL,      NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
+	/* class     instance  title           tags mask  isfloating  isterminal  noswallow opacity        monitor */
+	{ "Gimp",    NULL,     NULL,           0,         1,          0,           0,       1.0,             -1 },
+	{ "Firefox", NULL,     NULL,           1 << 1,    0,          0,          -1,       1.0,             -1 },
+	{ "St",      NULL,     NULL,           0,         0,          1,           0,       defaultopacity,  -1 },
+	{ NULL,      NULL,     "Event Tester", 0,         0,          0,           1,       1.0,             -1 }, /* xev */
 };
 
 /* layout(s) */
@@ -103,6 +104,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = +5 } },
 	{ MODKEY|ShiftMask,             XK_minus,  setgaps,        {.i = GAP_RESET } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = GAP_TOGGLE} },
+	{ MODKEY|ShiftMask,		XK_KP_Add, changeopacity,	{.f = +0.1}},
+	{ MODKEY|ShiftMask,		XK_KP_Subtract, changeopacity,  {.f = -0.1}},
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
