@@ -1,5 +1,5 @@
 # dwm_openBSD
-The idea of this repository is to have an OpenBSD DWM source with some patches applied. Some of them are just eye-candy and the other ones are interesting features that make DWM unique.
+The idea of this repository is to have an OpenBSD DWM source with some patches applied. Some of them are just eye-candy. The other ones are interesting features that make DWM unique.
 
 For more information about DWM, have a look at the website: https://dwm.suckless.org/ 
 
@@ -13,7 +13,7 @@ Key bindings:
 Allmost vanilla. Have a look at config.h for your preferences.
 
 Patches:
-  All patches are vanilla, without modifications or very little modification to make the code just work.
+All patches are vanilla, without modifications or very little modification to make the code just work.
   
 Actually applied: 
 
@@ -27,8 +27,9 @@ swallow: https://dwm.suckless.org/patches/swallow/
 bar_height: https://dwm.suckless.org/patches/bar_height/
 
 ---
+TO-DO:
 
 There's a little issue with the st terminal if you have transparency enabled. When you go in monocle mode (fullscreen), you can see the rest of the windows of the tab in the background.
-The solution is probably in this patch:https://dwm.suckless.org/patches/clientopacity/ . Before uploading the changes, some work is needed to compile it as it does no compile with swallow applied.
+The solution is probably in this patch:https://dwm.suckless.org/patches/clientopacity/ . Before uploading the changes, some work is needed to compile with uploaded source (as it does not compile yet with swallow enabled).
 
 The last patch will be probably the scratchpad.
