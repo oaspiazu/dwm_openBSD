@@ -3,7 +3,7 @@ The idea of this repository is to have an OpenBSD DWM source with some patches a
 
 For more information about DWM, have a look at the website: https://dwm.suckless.org/
 
-Reasons: A lot of time is needed to apply manually these patches. Also, some corrections are needed.
+Reasons: A lot of time is needed to apply manually these patches. Also, some corrections are needed (opacity patch).
 
 Dependencies: Only SF Font. If you want your own font, just change it in your config.sh
 
