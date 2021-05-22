@@ -1,6 +1,8 @@
 # dwm_openBSD
 The idea of this repository is to have an OpenBSD DWM source with some patches applied. Some of them are just eye-candy. The other ones are interesting features that make DWM unique.
 
+![DWM](https://user-images.githubusercontent.com/84410375/119240152-49818400-bb4e-11eb-9699-b6ac5811567b.png)
+
 For more information about DWM, have a look at the website: https://dwm.suckless.org/ 
 
 Reasons: \
